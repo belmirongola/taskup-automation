@@ -205,6 +205,10 @@ export class TaskUpAPIClient {
   setToken(token: string): void {
     this.token = token;
   }
+
+  isAuthenticated(): boolean {
+    return this.token !== null;
+  }
 }
 
 // ─── Singleton ───
@@ -216,10 +220,12 @@ export async function getAPIClient(apiUrl?: string): Promise<TaskUpAPIClient> {
     _client = new TaskUpAPIClient(apiUrl);
   }
 
-  const auth = loadAuth();
-  if (auth) {
-    // Para login via Worker, precisaríamos de recuperar o token
-    // Por enquanto, mantemos compatibilidade com auth guardada
+  // Auto-login com credenciais guardadas se o cliente não tem token
+  if (!_client.isAuthenticated()) {
+    const auth = loadAuth();
+    if (auth) {
+      await _client.login(auth.email, auth.password);
+    }
   }
 
   return _client;

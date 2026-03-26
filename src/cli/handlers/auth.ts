@@ -47,7 +47,7 @@ export async function handleLogin(email?: string, password?: string): Promise<vo
       spinner.start("Autenticando...");
     }
 
-    const client = createClient();
+    const client = await createClient();
     await client.login(credentials.email, credentials.password);
     const user = await client.getUser();
 
@@ -88,23 +88,18 @@ export function handleWhoami(): void {
 }
 
 export async function ensureAuthenticatedWithAutoLogin(): Promise<void> {
-  const config = loadConfig();
   const auth = loadAuth();
 
-  // Se já está autenticado e tem credenciais guardadas, tudo bem
-  if (config.email && auth) {
-    return;
-  }
-
-  // Se não tem credenciais guardadas, pedir login
+  // Se não tem credenciais guardadas, pedir login interactivo
   if (!auth) {
     console.log(formatWarning("Credenciais não encontradas. Fazendo login..."));
     await handleLogin();
     return;
   }
 
-  // Se tem credenciais mas não está autenticado, tentar login automático
-  await handleLogin(auth.email, auth.password);
+  // Credenciais existem — o createClient() (agora async) faz auto-login
+  // via getAPIClient() singleton, então não é necessário mais nada aqui.
+  // A autenticação real acontece no primeiro createClient() do handler.
 }
 
 export async function ensureAuthenticated(): Promise<void> {

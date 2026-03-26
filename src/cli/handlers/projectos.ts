@@ -12,7 +12,7 @@ export async function handleListProjectos(options: {
   const spinner = ora("Carregando projectos...").start();
 
   try {
-    const client = createClient();
+    const client = await createClient();
     const projectos = await client.listProjectos({
       estado: options.estado,
       limit: options.limit || 20,
@@ -59,7 +59,7 @@ export async function handleCreateProjecto(options: {
   const spinner = ora("Criando projecto...").start();
 
   try {
-    const client = createClient();
+    const client = await createClient();
     const projecto = await client.createProjecto({
       nome: options.nome,
       descricao: options.descricao,
@@ -91,7 +91,7 @@ export async function handleUpdateProjecto(
   const spinner = ora("Actualizando projecto...").start();
 
   try {
-    const client = createClient();
+    const client = await createClient();
     const projecto = await client.updateProjecto(id, updates);
     spinner.succeed();
     console.log(formatSuccess(`Projecto actualizado`));
@@ -114,7 +114,7 @@ export async function handleDeleteProjecto(id: string): Promise<void> {
   const spinner = ora("Deletando projecto...").start();
 
   try {
-    const client = createClient();
+    const client = await createClient();
     await client.deleteProjecto(id);
     spinner.succeed();
     console.log(formatSuccess("Projecto deletado"));
@@ -136,7 +136,7 @@ export async function handleGetProjecto(id: string): Promise<void> {
   const spinner = ora("Carregando projecto...").start();
 
   try {
-    const client = createClient();
+    const client = await createClient();
     const projecto = await client.getProjecto(id);
     spinner.succeed();
     console.log(formatJSON(projecto));
