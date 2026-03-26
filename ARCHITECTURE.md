@@ -24,41 +24,63 @@
 └─────────────────────┘
 ```
 
-## Stack Completa
+## Stack Completa (Versão 1.1.0+)
+
+### Arquitetura com Cloudflare Worker
 
 ```
-┌──────────────────────────────────┐
-│   CLI User / Programmatic Use    │
-├──────────────────────────────────┤
-│                                  │
-│  ┌──────────────┐    ┌────────┐ │
-│  │ CLI Commands │    │Library │ │
-│  │  (yargs)     │    │(Import)│ │
-│  └──────────────┘    └────────┘ │
-│                                  │
-├──────────────────────────────────┤
-│                                  │
-│  ┌────────────────────────────┐ │
-│  │      TaskUpClient          │ │
-│  │  (Supabase Direct Access)  │ │
-│  └────────────────────────────┘ │
-│                                  │
-├──────────────────────────────────┤
-│                                  │
-│  ┌────────────────────────────┐ │
-│  │       Supabase             │ │
-│  │  (PostgreSQL + Realtime)   │ │
-│  └────────────────────────────┘ │
-│                                  │
-└──────────────────────────────────┘
+┌───────────────────────────────────────────────────────────┐
+│         TaskUp CLI (@belmirongola/taskup-cli)             │
+├───────────────────────────────────────────────────────────┤
+│                                                             │
+│  ┌──────────────────┐         ┌──────────────────┐       │
+│  │ CLI Commands     │         │ Library Import   │       │
+│  │ (yargs)          │         │ (TaskUpClient)   │       │
+│  └────────┬─────────┘         └────────┬─────────┘       │
+│           │                            │                  │
+│           └──────────────┬─────────────┘                  │
+│                          │                                │
+│              ┌───────────v───────────┐                   │
+│              │ Client Factory        │                   │
+│              │ (selecciona cliente)  │                   │
+│              └───────────┬───────────┘                   │
+│                          │                                │
+│       ┌──────────────────┴──────────────────┐            │
+│       │                                     │            │
+│       v (if TASKUP_API_URL)    v (if SUPABASE_URL)      │
+│                                                          │
+│  ┌────────────────────┐         ┌──────────────────┐   │
+│  │ TaskUpAPIClient    │         │ TaskUpClient     │   │
+│  │ (Worker API)       │         │ (Supabase Direct)│   │
+│  └─────────┬──────────┘         └────────┬─────────┘   │
+│            │                            │                │
+└────────────┼────────────────────────────┼────────────────┘
+             │                            │
+    ┌────────v────────┐        ┌─────────v────────┐
+    │ Cloudflare      │        │ Supabase API     │
+    │ Worker          │        │ (Direct)         │
+    │ API Gateway     │        └──────────────────┘
+    └────────┬────────┘
+             │
+    ┌────────v──────────────────┐
+    │  Supabase Backend          │
+    │  (PostgreSQL + Auth)       │
+    └───────────────────────────┘
 ```
+
+**Dual-mode support:**
+- ✅ **Mode 1 (Recomendado):** Via Cloudflare Worker (credenciais protegidas)
+- ✅ **Mode 2 (Dev local):** Directo a Supabase
 
 ## Ficheiros Estrutura
+
+### CLI Package (raiz do repositório)
 
 ```
 src/
 ├── api/
-│   └── client.ts               # [CORE] TaskUpClient — Supabase
+│   ├── client.ts               # [CORE] TaskUpClient — Supabase directo
+│   └── client-api.ts           # [NEW] TaskUpAPIClient — Worker API
 ├── types.ts                    # [CORE] Interfaces TypeScript
 ├── index.ts                    # [CORE] Library export
 ├── cli/
@@ -66,22 +88,87 @@ src/
 │   └── handlers/
 │       ├── auth.ts            # Auth commands (login, logout, whoami)
 │       ├── tarefas.ts         # Tarefas commands (list, create, update, delete)
-│       └── projectos.ts       # Projectos commands (list, create, update, delete)
+│       ├── projectos.ts       # Projectos commands (list, create, update, delete)
+│       └── config.ts          # Config command (supabase-url, supabase-key)
 └── utils/
-    ├── config.ts              # Config file management (~/.taskup-cli/config.json)
+    ├── config.ts              # Config file management (~/.taskup-cli/)
+    ├── client-factory.ts      # [NEW] Selecciona TaskUpClient vs TaskUpAPIClient
     └── formatter.ts           # Output formatting (table, JSON, colors)
 ```
 
+### Worker Package (./worker)
+
+```
+worker/
+├── src/
+│   ├── index.ts               # [CORE] Cloudflare Worker entry point
+│   ├── types.ts               # [CORE] Environment + interfaces
+│   ├── db.ts                  # [CORE] Supabase SDK calls + queries
+│   └── routes.ts              # [CORE] API endpoint handlers
+├── dist/                       # Compiled JavaScript (dist/index.js)
+├── wrangler.toml              # Cloudflare Workers config
+├── tsconfig.json              # TypeScript config
+├── package.json               # Dependencies: @supabase/supabase-js, etc.
+└── .env.example               # Environment template
+```
+
+## Modos de Operação
+
+### Mode 1: Via Cloudflare Worker (Recomendado para Produção)
+
+```bash
+export TASKUP_API_URL=https://taskup-api-prod.workers.dev
+taskup login --email user@email.com
+# Password: ****
+# ✓ Autenticado
+
+taskup tasks-list
+# GET https://taskup-api-prod.workers.dev/tarefas
+# ├─ Worker valida request
+# ├─ Worker acede Supabase com credenciais admin
+# └─ CLI exibe resultados
+```
+
+**Vantagens:**
+- ✅ Credenciais Supabase protegidas (servidor)
+- ✅ Sem necessidade de env vars no cliente
+- ✅ Caching/throttling possível
+- ✅ Escalável
+
+---
+
+### Mode 2: Directo a Supabase (Desenvolvimento Local)
+
+```bash
+export SUPABASE_URL=https://seu-project.supabase.co
+export SUPABASE_ANON_KEY=eyJ...
+taskup login --email user@email.com
+
+# Ou configurar:
+# taskup config set supabase-url https://...
+# taskup config set supabase-key eyJ...
+
+taskup tasks-list
+# Ligação directa ao Supabase
+```
+
+**Vantagens:**
+- ✅ Sem servidor externo
+- ✅ Rápido para dev local
+- ✅ Simples para debugging
+
+---
+
 ## Camadas de Dados
 
-### Layer 1: TaskUpClient
-- **Responsabilidade:** Interface direta com Supabase
-- **Métodos:** `login`, `listTarefas`, `createTarefa`, `updateTarefa`, `deleteTarefa`, etc.
-- **Uso:** Tanto CLI quanto programático
+### Layer 1: Clientes de API
+- **TaskUpClient** - Supabase directo (antigo)
+- **TaskUpAPIClient** - Worker API (novo)
+- **ClientFactory** - Selecciona qual usar
 
 ### Layer 2: CLI Handlers
 - **Responsabilidade:** Processar argumentos, validar input, chamar client
-- **Dependências:** TaskUpClient, formatter, config
+- **Dependências:** TaskUpClient ou TaskUpAPIClient, formatter, config
 - **Padrão:** Cada handler = um domínio (auth, tarefas, projectos)
 
 ### Layer 3: CLI Framework (yargs)
