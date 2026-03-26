@@ -22,6 +22,7 @@ import {
   handleDeleteProjecto,
   handleGetProjecto,
 } from "./handlers/projectos.js";
+import { handleConfigSet, handleConfigGet } from "./handlers/config.js";
 
 const pkg = {
   name: "taskup-cli",
@@ -175,6 +176,34 @@ const commandHandler = yargs(hideBin(process.argv))
     "Ver projecto",
     (y) => y.positional("id", { describe: "ID do projecto" }),
     (argv) => handleGetProjecto(argv.id as string)
+  )
+
+  // ═══════════════════════════════════════
+  //  CONFIG Commands
+  // ═══════════════════════════════════════
+  .command(
+    "config",
+    "Gerenciar configuração",
+    (y) =>
+      y
+        .command(
+          "set <key> <value>",
+          "Configurar variáveis",
+          (y) =>
+            y
+              .positional("key", {
+                describe: "Chave (supabase-url|supabase-key)",
+              })
+              .positional("value", { describe: "Valor" }),
+          (argv) => handleConfigSet(argv.key as string, argv.value as string)
+        )
+        .command(
+          "get [key]",
+          "Ver configuração",
+          (y) => y.positional("key", { describe: "Chave (opcional)" }),
+          (argv) => handleConfigGet(argv.key as string)
+        ),
+    () => {} // config is a group, not a command
   )
 
   // ═══════════════════════════════════════

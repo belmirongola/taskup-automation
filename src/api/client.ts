@@ -11,16 +11,15 @@
 
 import "dotenv/config";
 import { createClient, SupabaseClient } from "@supabase/supabase-js";
-
-const SUPABASE_URL = process.env.SUPABASE_URL!;
-const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY!;
+import { getSupabaseCredentials } from "../utils/config.js";
 
 export class TaskUpClient {
   private supabase: SupabaseClient;
   private userId: string | null = null;
 
   constructor() {
-    this.supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    const { url, anonKey } = getSupabaseCredentials();
+    this.supabase = createClient(url, anonKey);
   }
 
   // ═══════════════════════════════════════
