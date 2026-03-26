@@ -14,7 +14,7 @@ route = "staging-api.taskup.marcadigital.ao/*"
 
 [[kv_namespaces]]
 binding = "CACHE"
-id = "taskup_cache"
+id = "7c324c9abc9b46119adc0744567e92f2"
 
 [build]
 command = "npm run build"
