@@ -1,0 +1,14 @@
+{
+  "cookies": [
+    {
+      "name": "sb-lgvgrtqcienrqubnxaqs-auth-token",
+      "domain": "taskup-md.vercel.app",
+      "path": "/",
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax",
+      "value": "base64-eyJ...[2569 chars]"
+    }
+  ],
+  "localStorageKeys": []
+}

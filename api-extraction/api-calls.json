@@ -1,0 +1,868 @@
+[
+  {
+    "method": "POST",
+    "url": "https://lgvgrtqcienrqubnxaqs.supabase.co/auth/v1/token?grant_type=password",
+    "path": "/auth/v1/token?grant_type=password",
+    "requestHeaders": {
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxndmdydHFjaWVucnF1Ym54YXFzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM4NjI3NDQsImV4cCI6MjA4OTQzODc0NH0.zF_qCXa14c4Zf1scbE51elZuooYXm7gsK2QPaMdX6cs",
+      "content-type": "application/json;charset=UTF-8",
+      "cookie": ""
+    },
+    "requestBody": {
+      "email": "belmirongola@gmail.com",
+      "password": "MarcaDigital2026!",
+      "gotrue_meta_security": {}
+    },
+    "responseStatus": 200,
+    "responseBody": {
+      "access_token": "eyJhbGciOiJFUzI1NiIsImtpZCI6ImMyODQ5M2ViLTgzNTMtNDVhYS05YTQ0LTFiMzAyNjhjZTMwOCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xndmdydHFjaWVucnF1Ym54YXFzLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI0OWI4NTYxZC0zMWM3LTRmOWYtYTIzNC1hZjE2YjUwNGU1ZWIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc0NTEyMDczLCJpYXQiOjE3NzQ1MDg0NzMsImVtYWlsIjoiYmVsbWlyb25nb2xhQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWxfdmVyaWZpZWQiOnRydWV9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc0NTA4NDczfV0sInNlc3Npb25faWQiOiI1ZmNlZjdmNy1jZTQ5LTQyN2EtYTZlYS03NmExNWUwNjkyOTEiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.OWji8q1cDQX7IVgXaehwWLjwLuCmkxRtxL4bcWgUBakyxOhfB8PbTD0OruF7ha2Sd4-0DMAGx9Lom5abB4Devw",
+      "token_type": "bearer",
+      "expires_in": 3600,
+      "expires_at": 1774512073,
+      "refresh_token": "p3gdxigj5uo6",
+      "user": {
+        "id": "49b8561d-31c7-4f9f-a234-af16b504e5eb",
+        "aud": "authenticated",
+        "role": "authenticated",
+        "email": "belmirongola@gmail.com",
+        "email_confirmed_at": "2026-03-18T21:46:13.564102Z",
+        "phone": "",
+        "confirmed_at": "2026-03-18T21:46:13.564102Z",
+        "last_sign_in_at": "2026-03-26T07:01:13.605759869Z",
+        "app_metadata": {
+          "provider": "email",
+          "providers": [
+            "email"
+          ]
+        },
+        "user_metadata": {
+          "email_verified": true
+        },
+        "identities": [
+          {
+            "identity_id": "9588edfd-5bbf-417b-af43-4acc24359c1c",
+            "id": "49b8561d-31c7-4f9f-a234-af16b504e5eb",
+            "user_id": "49b8561d-31c7-4f9f-a234-af16b504e5eb",
+            "identity_data": {
+              "email": "belmirongola@gmail.com",
+              "email_verified": false,
+              "phone_verified": false,
+              "sub": "49b8561d-31c7-4f9f-a234-af16b504e5eb"
+            },
+            "provider": "email",
+            "last_sign_in_at": "2026-03-18T21:46:13.562731Z",
+            "created_at": "2026-03-18T21:46:13.562777Z",
+            "updated_at": "2026-03-18T21:46:13.562777Z",
+            "email": "belmirongola@gmail.com"
+          }
+        ],
+        "created_at": "2026-03-18T21:46:13.56165Z",
+        "updated_at": "2026-03-26T07:01:13.609319Z",
+        "is_anonymous": false
+      },
+      "weak_password": null
+    },
+    "timestamp": "2026-03-26T07:01:13.835Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://lgvgrtqcienrqubnxaqs.supabase.co/rest/v1/users?select=*&id=eq.49b8561d-31c7-4f9f-a234-af16b504e5eb",
+    "path": "/rest/v1/users?select=*&id=eq.49b8561d-31c7-4f9f-a234-af16b504e5eb",
+    "requestHeaders": {
+      "authorization": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6ImMyODQ5M2ViLTgzNTMtNDVhYS05YTQ0LTFiMzAyNjhjZTMwOCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xndmdydHFjaWVucnF1Ym54YXFzLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI0OWI4NTYxZC0zMWM3LTRmOWYtYTIzNC1hZjE2YjUwNGU1ZWIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc0NTEyMDczLCJpYXQiOjE3NzQ1MDg0NzMsImVtYWlsIjoiYmVsbWlyb25nb2xhQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWxfdmVyaWZpZWQiOnRydWV9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc0NTA4NDczfV0sInNlc3Npb25faWQiOiI1ZmNlZjdmNy1jZTQ5LTQyN2EtYTZlYS03NmExNWUwNjkyOTEiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.OWji8q1cDQX7IVgXaehwWLjwLuCmkxRtxL4bcWgUBakyxOhfB8PbTD0OruF7ha2Sd4-0DMAGx9Lom5abB4Devw",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": {
+      "id": "49b8561d-31c7-4f9f-a234-af16b504e5eb",
+      "nome": "Belmiro Ngola",
+      "email": "belmirongola@gmail.com",
+      "papel": "membro",
+      "whatsapp_numero": "244930117059",
+      "avatar_url": "https://lgvgrtqcienrqubnxaqs.supabase.co/storage/v1/object/public/avatars/49b8561d-31c7-4f9f-a234-af16b504e5eb/avatar.png",
+      "activo": true,
+      "onboarding_concluido": false,
+      "onboarding_concluido_em": null,
+      "criado_em": "2026-03-18T21:46:45.919746+00:00",
+      "actualizado_em": "2026-03-24T13:17:18.554143+00:00"
+    },
+    "timestamp": "2026-03-26T07:01:14.457Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/dashboard?_rsc=970e3",
+    "path": "/dashboard?_rsc=970e3",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": "[7486 chars - truncated]",
+    "timestamp": "2026-03-26T07:01:14.697Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://lgvgrtqcienrqubnxaqs.supabase.co/rest/v1/users?select=*&id=eq.49b8561d-31c7-4f9f-a234-af16b504e5eb",
+    "path": "/rest/v1/users?select=*&id=eq.49b8561d-31c7-4f9f-a234-af16b504e5eb",
+    "requestHeaders": {
+      "authorization": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6ImMyODQ5M2ViLTgzNTMtNDVhYS05YTQ0LTFiMzAyNjhjZTMwOCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xndmdydHFjaWVucnF1Ym54YXFzLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI0OWI4NTYxZC0zMWM3LTRmOWYtYTIzNC1hZjE2YjUwNGU1ZWIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc0NTEyMDczLCJpYXQiOjE3NzQ1MDg0NzMsImVtYWlsIjoiYmVsbWlyb25nb2xhQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWxfdmVyaWZpZWQiOnRydWV9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc0NTA4NDczfV0sInNlc3Npb25faWQiOiI1ZmNlZjdmNy1jZTQ5LTQyN2EtYTZlYS03NmExNWUwNjkyOTEiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.OWji8q1cDQX7IVgXaehwWLjwLuCmkxRtxL4bcWgUBakyxOhfB8PbTD0OruF7ha2Sd4-0DMAGx9Lom5abB4Devw",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": {
+      "id": "49b8561d-31c7-4f9f-a234-af16b504e5eb",
+      "nome": "Belmiro Ngola",
+      "email": "belmirongola@gmail.com",
+      "papel": "membro",
+      "whatsapp_numero": "244930117059",
+      "avatar_url": "https://lgvgrtqcienrqubnxaqs.supabase.co/storage/v1/object/public/avatars/49b8561d-31c7-4f9f-a234-af16b504e5eb/avatar.png",
+      "activo": true,
+      "onboarding_concluido": false,
+      "onboarding_concluido_em": null,
+      "criado_em": "2026-03-18T21:46:45.919746+00:00",
+      "actualizado_em": "2026-03-24T13:17:18.554143+00:00"
+    },
+    "timestamp": "2026-03-26T07:01:15.498Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/projectos?_rsc=18t7j",
+    "path": "/projectos?_rsc=18t7j",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": ":HL[\"/_next/static/chunks/bc43761033490500.css\",\"style\"]\n0:{\"buildId\":\"lUDKSMQ33Du_SxNWRws-h\",\"tree\":{\"name\":\"\",\"paramType\":null,\"paramKey\":\"\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"(dashboard)\",\"paramType\":null,\"paramKey\":\"(dashboard)\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"projectos\",\"paramType\":null,\"paramKey\":\"projectos\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"__PAGE__\",\"paramType\":null,\"paramKey\":\"__PAGE__\",\"hasRuntimePrefetch\":false,\"slots\":null,\"isRootLayout\":false}},\"isRootLayout\":false}},\"isRootLayout\":false}},\"isRootLayout\":true},\"staleTime\":300}\n",
+    "timestamp": "2026-03-26T07:01:15.867Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/guia?_rsc=18t7j",
+    "path": "/guia?_rsc=18t7j",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": ":HL[\"/_next/static/chunks/bc43761033490500.css\",\"style\"]\n0:{\"buildId\":\"lUDKSMQ33Du_SxNWRws-h\",\"tree\":{\"name\":\"\",\"paramType\":null,\"paramKey\":\"\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"(dashboard)\",\"paramType\":null,\"paramKey\":\"(dashboard)\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"guia\",\"paramType\":null,\"paramKey\":\"guia\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"__PAGE__\",\"paramType\":null,\"paramKey\":\"__PAGE__\",\"hasRuntimePrefetch\":false,\"slots\":null,\"isRootLayout\":false}},\"isRootLayout\":false}},\"isRootLayout\":false}},\"isRootLayout\":true},\"staleTime\":300}\n",
+    "timestamp": "2026-03-26T07:01:15.870Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/configuracoes?_rsc=18t7j",
+    "path": "/configuracoes?_rsc=18t7j",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": ":HL[\"/_next/static/chunks/bc43761033490500.css\",\"style\"]\n0:{\"buildId\":\"lUDKSMQ33Du_SxNWRws-h\",\"tree\":{\"name\":\"\",\"paramType\":null,\"paramKey\":\"\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"(dashboard)\",\"paramType\":null,\"paramKey\":\"(dashboard)\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"configuracoes\",\"paramType\":null,\"paramKey\":\"configuracoes\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"__PAGE__\",\"paramType\":null,\"paramKey\":\"__PAGE__\",\"hasRuntimePrefetch\":false,\"slots\":null,\"isRootLayout\":false}},\"isRootLayout\":false}},\"isRootLayout\":false}},\"isRootLayout\":true},\"staleTime\":300}\n",
+    "timestamp": "2026-03-26T07:01:15.894Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/reunioes?_rsc=18t7j",
+    "path": "/reunioes?_rsc=18t7j",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": ":HL[\"/_next/static/chunks/bc43761033490500.css\",\"style\"]\n0:{\"buildId\":\"lUDKSMQ33Du_SxNWRws-h\",\"tree\":{\"name\":\"\",\"paramType\":null,\"paramKey\":\"\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"(dashboard)\",\"paramType\":null,\"paramKey\":\"(dashboard)\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"reunioes\",\"paramType\":null,\"paramKey\":\"reunioes\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"__PAGE__\",\"paramType\":null,\"paramKey\":\"__PAGE__\",\"hasRuntimePrefetch\":false,\"slots\":null,\"isRootLayout\":false}},\"isRootLayout\":false}},\"isRootLayout\":false}},\"isRootLayout\":true},\"staleTime\":300}\n",
+    "timestamp": "2026-03-26T07:01:15.919Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://lgvgrtqcienrqubnxaqs.supabase.co/rest/v1/users?select=*&id=eq.49b8561d-31c7-4f9f-a234-af16b504e5eb",
+    "path": "/rest/v1/users?select=*&id=eq.49b8561d-31c7-4f9f-a234-af16b504e5eb",
+    "requestHeaders": {
+      "authorization": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6ImMyODQ5M2ViLTgzNTMtNDVhYS05YTQ0LTFiMzAyNjhjZTMwOCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xndmdydHFjaWVucnF1Ym54YXFzLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI0OWI4NTYxZC0zMWM3LTRmOWYtYTIzNC1hZjE2YjUwNGU1ZWIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc0NTEyMDczLCJpYXQiOjE3NzQ1MDg0NzMsImVtYWlsIjoiYmVsbWlyb25nb2xhQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWxfdmVyaWZpZWQiOnRydWV9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc0NTA4NDczfV0sInNlc3Npb25faWQiOiI1ZmNlZjdmNy1jZTQ5LTQyN2EtYTZlYS03NmExNWUwNjkyOTEiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.OWji8q1cDQX7IVgXaehwWLjwLuCmkxRtxL4bcWgUBakyxOhfB8PbTD0OruF7ha2Sd4-0DMAGx9Lom5abB4Devw",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": {
+      "id": "49b8561d-31c7-4f9f-a234-af16b504e5eb",
+      "nome": "Belmiro Ngola",
+      "email": "belmirongola@gmail.com",
+      "papel": "membro",
+      "whatsapp_numero": "244930117059",
+      "avatar_url": "https://lgvgrtqcienrqubnxaqs.supabase.co/storage/v1/object/public/avatars/49b8561d-31c7-4f9f-a234-af16b504e5eb/avatar.png",
+      "activo": true,
+      "onboarding_concluido": false,
+      "onboarding_concluido_em": null,
+      "criado_em": "2026-03-18T21:46:45.919746+00:00",
+      "actualizado_em": "2026-03-24T13:17:18.554143+00:00"
+    },
+    "timestamp": "2026-03-26T07:01:15.920Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/calendario?_rsc=18t7j",
+    "path": "/calendario?_rsc=18t7j",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": ":HL[\"/_next/static/chunks/bc43761033490500.css\",\"style\"]\n0:{\"buildId\":\"lUDKSMQ33Du_SxNWRws-h\",\"tree\":{\"name\":\"\",\"paramType\":null,\"paramKey\":\"\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"(dashboard)\",\"paramType\":null,\"paramKey\":\"(dashboard)\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"calendario\",\"paramType\":null,\"paramKey\":\"calendario\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"__PAGE__\",\"paramType\":null,\"paramKey\":\"__PAGE__\",\"hasRuntimePrefetch\":false,\"slots\":null,\"isRootLayout\":false}},\"isRootLayout\":false}},\"isRootLayout\":false}},\"isRootLayout\":true},\"staleTime\":300}\n",
+    "timestamp": "2026-03-26T07:01:16.198Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/colaboradores?_rsc=18t7j",
+    "path": "/colaboradores?_rsc=18t7j",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": ":HL[\"/_next/static/chunks/bc43761033490500.css\",\"style\"]\n0:{\"buildId\":\"lUDKSMQ33Du_SxNWRws-h\",\"tree\":{\"name\":\"\",\"paramType\":null,\"paramKey\":\"\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"(dashboard)\",\"paramType\":null,\"paramKey\":\"(dashboard)\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"colaboradores\",\"paramType\":null,\"paramKey\":\"colaboradores\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"__PAGE__\",\"paramType\":null,\"paramKey\":\"__PAGE__\",\"hasRuntimePrefetch\":false,\"slots\":null,\"isRootLayout\":false}},\"isRootLayout\":false}},\"isRootLayout\":false}},\"isRootLayout\":true},\"staleTime\":300}\n",
+    "timestamp": "2026-03-26T07:01:16.198Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/kanban?_rsc=18t7j",
+    "path": "/kanban?_rsc=18t7j",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": ":HL[\"/_next/static/chunks/bc43761033490500.css\",\"style\"]\n0:{\"buildId\":\"lUDKSMQ33Du_SxNWRws-h\",\"tree\":{\"name\":\"\",\"paramType\":null,\"paramKey\":\"\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"(dashboard)\",\"paramType\":null,\"paramKey\":\"(dashboard)\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"kanban\",\"paramType\":null,\"paramKey\":\"kanban\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"__PAGE__\",\"paramType\":null,\"paramKey\":\"__PAGE__\",\"hasRuntimePrefetch\":false,\"slots\":null,\"isRootLayout\":false}},\"isRootLayout\":false}},\"isRootLayout\":false}},\"isRootLayout\":true},\"staleTime\":300}\n",
+    "timestamp": "2026-03-26T07:01:16.199Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/tarefas?_rsc=18t7j",
+    "path": "/tarefas?_rsc=18t7j",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": ":HL[\"/_next/static/chunks/bc43761033490500.css\",\"style\"]\n0:{\"buildId\":\"lUDKSMQ33Du_SxNWRws-h\",\"tree\":{\"name\":\"\",\"paramType\":null,\"paramKey\":\"\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"(dashboard)\",\"paramType\":null,\"paramKey\":\"(dashboard)\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"tarefas\",\"paramType\":null,\"paramKey\":\"tarefas\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"__PAGE__\",\"paramType\":null,\"paramKey\":\"__PAGE__\",\"hasRuntimePrefetch\":false,\"slots\":null,\"isRootLayout\":false}},\"isRootLayout\":false}},\"isRootLayout\":false}},\"isRootLayout\":true},\"staleTime\":300}\n",
+    "timestamp": "2026-03-26T07:01:16.201Z",
+    "section": "login"
+  },
+  {
+    "method": "HEAD",
+    "url": "https://lgvgrtqcienrqubnxaqs.supabase.co/rest/v1/notificacoes?select=*&user_id=eq.49b8561d-31c7-4f9f-a234-af16b504e5eb&lida=eq.false&canal=in.%28dashboard%2Cambos%29",
+    "path": "/rest/v1/notificacoes?select=*&user_id=eq.49b8561d-31c7-4f9f-a234-af16b504e5eb&lida=eq.false&canal=in.%28dashboard%2Cambos%29",
+    "requestHeaders": {
+      "authorization": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6ImMyODQ5M2ViLTgzNTMtNDVhYS05YTQ0LTFiMzAyNjhjZTMwOCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xndmdydHFjaWVucnF1Ym54YXFzLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI0OWI4NTYxZC0zMWM3LTRmOWYtYTIzNC1hZjE2YjUwNGU1ZWIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc0NTEyMDczLCJpYXQiOjE3NzQ1MDg0NzMsImVtYWlsIjoiYmVsbWlyb25nb2xhQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWxfdmVyaWZpZWQiOnRydWV9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc0NTA4NDczfV0sInNlc3Npb25faWQiOiI1ZmNlZjdmNy1jZTQ5LTQyN2EtYTZlYS03NmExNWUwNjkyOTEiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.OWji8q1cDQX7IVgXaehwWLjwLuCmkxRtxL4bcWgUBakyxOhfB8PbTD0OruF7ha2Sd4-0DMAGx9Lom5abB4Devw",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": "[unable to parse]",
+    "timestamp": "2026-03-26T07:01:16.204Z",
+    "section": "login"
+  },
+  {
+    "method": "HEAD",
+    "url": "https://lgvgrtqcienrqubnxaqs.supabase.co/rest/v1/tarefas?select=id&estado=eq.concluido&actualizado_em=gte.2026-03-26T00%3A00%3A00",
+    "path": "/rest/v1/tarefas?select=id&estado=eq.concluido&actualizado_em=gte.2026-03-26T00%3A00%3A00",
+    "requestHeaders": {
+      "authorization": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6ImMyODQ5M2ViLTgzNTMtNDVhYS05YTQ0LTFiMzAyNjhjZTMwOCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xndmdydHFjaWVucnF1Ym54YXFzLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI0OWI4NTYxZC0zMWM3LTRmOWYtYTIzNC1hZjE2YjUwNGU1ZWIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc0NTEyMDczLCJpYXQiOjE3NzQ1MDg0NzMsImVtYWlsIjoiYmVsbWlyb25nb2xhQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWxfdmVyaWZpZWQiOnRydWV9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc0NTA4NDczfV0sInNlc3Npb25faWQiOiI1ZmNlZjdmNy1jZTQ5LTQyN2EtYTZlYS03NmExNWUwNjkyOTEiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.OWji8q1cDQX7IVgXaehwWLjwLuCmkxRtxL4bcWgUBakyxOhfB8PbTD0OruF7ha2Sd4-0DMAGx9Lom5abB4Devw",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": "[unable to parse]",
+    "timestamp": "2026-03-26T07:01:16.208Z",
+    "section": "login"
+  },
+  {
+    "method": "HEAD",
+    "url": "https://lgvgrtqcienrqubnxaqs.supabase.co/rest/v1/projectos?select=id&estado=eq.activo",
+    "path": "/rest/v1/projectos?select=id&estado=eq.activo",
+    "requestHeaders": {
+      "authorization": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6ImMyODQ5M2ViLTgzNTMtNDVhYS05YTQ0LTFiMzAyNjhjZTMwOCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xndmdydHFjaWVucnF1Ym54YXFzLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI0OWI4NTYxZC0zMWM3LTRmOWYtYTIzNC1hZjE2YjUwNGU1ZWIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc0NTEyMDczLCJpYXQiOjE3NzQ1MDg0NzMsImVtYWlsIjoiYmVsbWlyb25nb2xhQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWxfdmVyaWZpZWQiOnRydWV9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc0NTA4NDczfV0sInNlc3Npb25faWQiOiI1ZmNlZjdmNy1jZTQ5LTQyN2EtYTZlYS03NmExNWUwNjkyOTEiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.OWji8q1cDQX7IVgXaehwWLjwLuCmkxRtxL4bcWgUBakyxOhfB8PbTD0OruF7ha2Sd4-0DMAGx9Lom5abB4Devw",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": "[unable to parse]",
+    "timestamp": "2026-03-26T07:01:16.212Z",
+    "section": "login"
+  },
+  {
+    "method": "HEAD",
+    "url": "https://lgvgrtqcienrqubnxaqs.supabase.co/rest/v1/tarefas?select=id&prazo=lt.2026-03-26&estado=not.in.%28%22concluido%22%2C%22cancelado%22%29",
+    "path": "/rest/v1/tarefas?select=id&prazo=lt.2026-03-26&estado=not.in.%28%22concluido%22%2C%22cancelado%22%29",
+    "requestHeaders": {
+      "authorization": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6ImMyODQ5M2ViLTgzNTMtNDVhYS05YTQ0LTFiMzAyNjhjZTMwOCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xndmdydHFjaWVucnF1Ym54YXFzLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI0OWI4NTYxZC0zMWM3LTRmOWYtYTIzNC1hZjE2YjUwNGU1ZWIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc0NTEyMDczLCJpYXQiOjE3NzQ1MDg0NzMsImVtYWlsIjoiYmVsbWlyb25nb2xhQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWxfdmVyaWZpZWQiOnRydWV9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc0NTA4NDczfV0sInNlc3Npb25faWQiOiI1ZmNlZjdmNy1jZTQ5LTQyN2EtYTZlYS03NmExNWUwNjkyOTEiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.OWji8q1cDQX7IVgXaehwWLjwLuCmkxRtxL4bcWgUBakyxOhfB8PbTD0OruF7ha2Sd4-0DMAGx9Lom5abB4Devw",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": "[unable to parse]",
+    "timestamp": "2026-03-26T07:01:16.213Z",
+    "section": "login"
+  },
+  {
+    "method": "HEAD",
+    "url": "https://lgvgrtqcienrqubnxaqs.supabase.co/rest/v1/tarefas?select=id",
+    "path": "/rest/v1/tarefas?select=id",
+    "requestHeaders": {
+      "authorization": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6ImMyODQ5M2ViLTgzNTMtNDVhYS05YTQ0LTFiMzAyNjhjZTMwOCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xndmdydHFjaWVucnF1Ym54YXFzLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI0OWI4NTYxZC0zMWM3LTRmOWYtYTIzNC1hZjE2YjUwNGU1ZWIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc0NTEyMDczLCJpYXQiOjE3NzQ1MDg0NzMsImVtYWlsIjoiYmVsbWlyb25nb2xhQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWxfdmVyaWZpZWQiOnRydWV9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc0NTA4NDczfV0sInNlc3Npb25faWQiOiI1ZmNlZjdmNy1jZTQ5LTQyN2EtYTZlYS03NmExNWUwNjkyOTEiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.OWji8q1cDQX7IVgXaehwWLjwLuCmkxRtxL4bcWgUBakyxOhfB8PbTD0OruF7ha2Sd4-0DMAGx9Lom5abB4Devw",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": "[unable to parse]",
+    "timestamp": "2026-03-26T07:01:16.291Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://lgvgrtqcienrqubnxaqs.supabase.co/rest/v1/users?select=*&id=eq.49b8561d-31c7-4f9f-a234-af16b504e5eb",
+    "path": "/rest/v1/users?select=*&id=eq.49b8561d-31c7-4f9f-a234-af16b504e5eb",
+    "requestHeaders": {
+      "authorization": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6ImMyODQ5M2ViLTgzNTMtNDVhYS05YTQ0LTFiMzAyNjhjZTMwOCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xndmdydHFjaWVucnF1Ym54YXFzLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI0OWI4NTYxZC0zMWM3LTRmOWYtYTIzNC1hZjE2YjUwNGU1ZWIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc0NTEyMDczLCJpYXQiOjE3NzQ1MDg0NzMsImVtYWlsIjoiYmVsbWlyb25nb2xhQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWxfdmVyaWZpZWQiOnRydWV9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc0NTA4NDczfV0sInNlc3Npb25faWQiOiI1ZmNlZjdmNy1jZTQ5LTQyN2EtYTZlYS03NmExNWUwNjkyOTEiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.OWji8q1cDQX7IVgXaehwWLjwLuCmkxRtxL4bcWgUBakyxOhfB8PbTD0OruF7ha2Sd4-0DMAGx9Lom5abB4Devw",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": {
+      "id": "49b8561d-31c7-4f9f-a234-af16b504e5eb",
+      "nome": "Belmiro Ngola",
+      "email": "belmirongola@gmail.com",
+      "papel": "membro",
+      "whatsapp_numero": "244930117059",
+      "avatar_url": "https://lgvgrtqcienrqubnxaqs.supabase.co/storage/v1/object/public/avatars/49b8561d-31c7-4f9f-a234-af16b504e5eb/avatar.png",
+      "activo": true,
+      "onboarding_concluido": false,
+      "onboarding_concluido_em": null,
+      "criado_em": "2026-03-18T21:46:45.919746+00:00",
+      "actualizado_em": "2026-03-24T13:17:18.554143+00:00"
+    },
+    "timestamp": "2026-03-26T07:01:16.350Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/guia?_rsc=oh8t4",
+    "path": "/guia?_rsc=oh8t4",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": "1:\"$Sreact.fragment\"\n2:I[97367,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/d2be314c3ece3fbe.js\"],\"ViewportBoundary\"]\n3:I[97367,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/d2be314c3ece3fbe.js\"],\"MetadataBoundary\"]\n4:\"$Sreact.suspense\"\n0:{\"buildId\":\"lUDKSMQ33Du_SxNWRws-h\",\"rsc\":[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$L2\",null,{\"children\":[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]}],[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$L3\",null,{\"children\":[\"$\",\"$4\",null,{\"name\":\"Next.Metadata\",\"children\":[[\"$\",\"title\",\"0\",{\"children\":\"TaskUp â€” Gestao de Tarefas\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Sistema de gestao de tarefas WhatsApp-first para Marca Digital\"}]]}]}]}],null]}],\"loading\":null,\"isPartial\":false}\n",
+    "timestamp": "2026-03-26T07:01:16.538Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/guia?_rsc=585va",
+    "path": "/guia?_rsc=585va",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": "1:\"$Sreact.fragment\"\n2:I[1661,[\"/_next/static/chunks/c6fecce43ab821b3.js\"],\"Providers\"]\n3:I[39756,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/d2be314c3ece3fbe.js\"],\"default\"]\n4:I[37457,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/d2be314c3ece3fbe.js\"],\"default\"]\n:HL[\"/_next/static/chunks/bc43761033490500.css\",\"style\"]\n0:{\"buildId\":\"lUDKSMQ33Du_SxNWRws-h\",\"rsc\":[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/chunks/bc43761033490500.css\",\"precedence\":\"next\"}],[\"$\",\"script\",\"script-0\",{\"src\":\"/_next/static/chunks/c6fecce43ab821b3.js\",\"async\":true}]],[\"$\",\"html\",null,{\"lang\":\"pt-AO\",\"suppressHydrationWarning\":true,\"children\":[[\"$\",\"head\",null,{\"children\":[\"$\",\"script\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"(function(){try{var t=localStorage.getItem('taskup-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}})()\"}}]}],[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"parallelRouterKey\":\"children\",\"template\":[\"$\",\"$L4\",null,{}],\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[]]}]}]}]]}]]}],\"loading\":null,\"isPartial\":false}\n",
+    "timestamp": "2026-03-26T07:01:16.538Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/dashboard?_rsc=18t7j",
+    "path": "/dashboard?_rsc=18t7j",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": ":HL[\"/_next/static/chunks/bc43761033490500.css\",\"style\"]\n0:{\"buildId\":\"lUDKSMQ33Du_SxNWRws-h\",\"tree\":{\"name\":\"\",\"paramType\":null,\"paramKey\":\"\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"(dashboard)\",\"paramType\":null,\"paramKey\":\"(dashboard)\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"dashboard\",\"paramType\":null,\"paramKey\":\"dashboard\",\"hasRuntimePrefetch\":false,\"slots\":{\"children\":{\"name\":\"__PAGE__\",\"paramType\":null,\"paramKey\":\"__PAGE__\",\"hasRuntimePrefetch\":false,\"slots\":null,\"isRootLayout\":false}},\"isRootLayout\":false}},\"isRootLayout\":false}},\"isRootLayout\":true},\"staleTime\":300}\n",
+    "timestamp": "2026-03-26T07:01:16.539Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/guia?_rsc=1yeh9",
+    "path": "/guia?_rsc=1yeh9",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": "1:\"$Sreact.fragment\"\n2:I[92825,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/d2be314c3ece3fbe.js\"],\"ClientSegmentRoot\"]\n3:I[16370,[\"/_next/static/chunks/c6fecce43ab821b3.js\",\"/_next/static/chunks/008e086f1445978d.js\",\"/_next/static/chunks/51985fd65ca3de61.js\",\"/_next/static/chunks/f69283fda17c61d2.js\",\"/_next/static/chunks/045cf6eb52848830.js\"],\"default\"]\n4:I[39756,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/d2be314c3ece3fbe.js\"],\"default\"]\n5:I[37457,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/d2be314c3ece3fbe.js\"],\"default\"]\n0:{\"buildId\":\"lUDKSMQ33Du_SxNWRws-h\",\"rsc\":[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"script\",\"script-0\",{\"src\":\"/_next/static/chunks/008e086f1445978d.js\",\"async\":true}],[\"$\",\"script\",\"script-1\",{\"src\":\"/_next/static/chunks/51985fd65ca3de61.js\",\"async\":true}],[\"$\",\"script\",\"script-2\",{\"src\":\"/_next/static/chunks/f69283fda17c61d2.js\",\"async\":true}],[\"$\",\"script\",\"script-3\",{\"src\":\"/_next/static/chunks/045cf6eb52848830.js\",\"async\":true}]],[\"$\",\"$L2\",null,{\"Component\":\"$3\",\"slots\":{\"children\":[\"$\",\"$L4\",null,{\"parallelRouterKey\":\"children\",\"template\":[\"$\",\"$L5\",null,{}],\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[]]}]},\"serverProvidedParams\":{\"params\":{},\"promises\":[\"$@6\"]}}]]}],\"loading\":null,\"isPartial\":false}\n6:\"$0:rsc:props:children:1:props:serverProvidedParams:params\"\n",
+    "timestamp": "2026-03-26T07:01:16.541Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/configuracoes?_rsc=1gcgx",
+    "path": "/configuracoes?_rsc=1gcgx",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": "1:\"$Sreact.fragment\"\n2:I[39756,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/d2be314c3ece3fbe.js\"],\"default\"]\n3:I[37457,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/d2be314c3ece3fbe.js\"],\"default\"]\n0:{\"buildId\":\"lUDKSMQ33Du_SxNWRws-h\",\"rsc\":[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"template\":[\"$\",\"$L3\",null,{}]}]]}],\"loading\":null,\"isPartial\":false}\n",
+    "timestamp": "2026-03-26T07:01:16.815Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://lgvgrtqcienrqubnxaqs.supabase.co/rest/v1/users?select=*&id=eq.49b8561d-31c7-4f9f-a234-af16b504e5eb",
+    "path": "/rest/v1/users?select=*&id=eq.49b8561d-31c7-4f9f-a234-af16b504e5eb",
+    "requestHeaders": {
+      "authorization": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6ImMyODQ5M2ViLTgzNTMtNDVhYS05YTQ0LTFiMzAyNjhjZTMwOCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xndmdydHFjaWVucnF1Ym54YXFzLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI0OWI4NTYxZC0zMWM3LTRmOWYtYTIzNC1hZjE2YjUwNGU1ZWIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc0NTEyMDczLCJpYXQiOjE3NzQ1MDg0NzMsImVtYWlsIjoiYmVsbWlyb25nb2xhQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWxfdmVyaWZpZWQiOnRydWV9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc0NTA4NDczfV0sInNlc3Npb25faWQiOiI1ZmNlZjdmNy1jZTQ5LTQyN2EtYTZlYS03NmExNWUwNjkyOTEiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.OWji8q1cDQX7IVgXaehwWLjwLuCmkxRtxL4bcWgUBakyxOhfB8PbTD0OruF7ha2Sd4-0DMAGx9Lom5abB4Devw",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": {
+      "id": "49b8561d-31c7-4f9f-a234-af16b504e5eb",
+      "nome": "Belmiro Ngola",
+      "email": "belmirongola@gmail.com",
+      "papel": "membro",
+      "whatsapp_numero": "244930117059",
+      "avatar_url": "https://lgvgrtqcienrqubnxaqs.supabase.co/storage/v1/object/public/avatars/49b8561d-31c7-4f9f-a234-af16b504e5eb/avatar.png",
+      "activo": true,
+      "onboarding_concluido": false,
+      "onboarding_concluido_em": null,
+      "criado_em": "2026-03-18T21:46:45.919746+00:00",
+      "actualizado_em": "2026-03-24T13:17:18.554143+00:00"
+    },
+    "timestamp": "2026-03-26T07:01:16.825Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/guia?_rsc=14xkb",
+    "path": "/guia?_rsc=14xkb",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": "1:\"$Sreact.fragment\"\n2:I[39756,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/d2be314c3ece3fbe.js\"],\"default\"]\n3:I[37457,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/d2be314c3ece3fbe.js\"],\"default\"]\n0:{\"buildId\":\"lUDKSMQ33Du_SxNWRws-h\",\"rsc\":[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"template\":[\"$\",\"$L3\",null,{}]}]]}],\"loading\":null,\"isPartial\":false}\n",
+    "timestamp": "2026-03-26T07:01:16.825Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/configuracoes?_rsc=oh8t4",
+    "path": "/configuracoes?_rsc=oh8t4",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": "1:\"$Sreact.fragment\"\n2:I[97367,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/d2be314c3ece3fbe.js\"],\"ViewportBoundary\"]\n3:I[97367,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/d2be314c3ece3fbe.js\"],\"MetadataBoundary\"]\n4:\"$Sreact.suspense\"\n0:{\"buildId\":\"lUDKSMQ33Du_SxNWRws-h\",\"rsc\":[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$L2\",null,{\"children\":[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]}],[\"$\",\"div\",null,{\"hidden\":true,\"children\":[\"$\",\"$L3\",null,{\"children\":[\"$\",\"$4\",null,{\"name\":\"Next.Metadata\",\"children\":[[\"$\",\"title\",\"0\",{\"children\":\"TaskUp â€” Gestao de Tarefas\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Sistema de gestao de tarefas WhatsApp-first para Marca Digital\"}]]}]}]}],null]}],\"loading\":null,\"isPartial\":false}\n",
+    "timestamp": "2026-03-26T07:01:16.833Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/guia?_rsc=1fpbl",
+    "path": "/guia?_rsc=1fpbl",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": "1:\"$Sreact.fragment\"\n2:I[47257,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/d2be314c3ece3fbe.js\"],\"ClientPageRoot\"]\n3:I[67079,[\"/_next/static/chunks/c6fecce43ab821b3.js\",\"/_next/static/chunks/008e086f1445978d.js\",\"/_next/static/chunks/51985fd65ca3de61.js\",\"/_next/static/chunks/f69283fda17c61d2.js\",\"/_next/static/chunks/045cf6eb52848830.js\",\"/_next/static/chunks/3b74d32724859614.js\"],\"default\"]\n6:I[97367,[\"/_next/static/chunks/ff1a16fafef87110.js\",\"/_next/static/chunks/d2be314c3ece3fbe.js\"],\"OutletBoundary\"]\n7:\"$Sreact.suspense\"\n0:{\"buildId\":\"lUDKSMQ33Du_SxNWRws-h\",\"rsc\":[\"$\",\"$1\",\"c\",{\"children\":[[\"$\",\"$L2\",null,{\"Component\":\"$3\",\"serverProvidedParams\":{\"searchParams\":{},\"params\":{},\"promises\":[\"$@4\",\"$@5\"]}}],[[\"$\",\"script\",\"script-0\",{\"src\":\"/_next/static/chunks/3b74d32724859614.js\",\"async\":true}]],[\"$\",\"$L6\",null,{\"children\":[\"$\",\"$7\",null,{\"name\":\"Next.MetadataOutlet\",\"children\":\"$@8\"}]}]]}],\"loading\":null,\"isPartial\":false}\n4:{}\n5:{}\n8:null\n",
+    "timestamp": "2026-03-26T07:01:16.837Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://lgvgrtqcienrqubnxaqs.supabase.co/rest/v1/users?select=id%2Cnome%2Ccriado_em&order=criado_em.desc&limit=2",
+    "path": "/rest/v1/users?select=id%2Cnome%2Ccriado_em&order=criado_em.desc&limit=2",
+    "requestHeaders": {
+      "authorization": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6ImMyODQ5M2ViLTgzNTMtNDVhYS05YTQ0LTFiMzAyNjhjZTMwOCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xndmdydHFjaWVucnF1Ym54YXFzLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI0OWI4NTYxZC0zMWM3LTRmOWYtYTIzNC1hZjE2YjUwNGU1ZWIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc0NTEyMDczLCJpYXQiOjE3NzQ1MDg0NzMsImVtYWlsIjoiYmVsbWlyb25nb2xhQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWxfdmVyaWZpZWQiOnRydWV9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc0NTA4NDczfV0sInNlc3Npb25faWQiOiI1ZmNlZjdmNy1jZTQ5LTQyN2EtYTZlYS03NmExNWUwNjkyOTEiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.OWji8q1cDQX7IVgXaehwWLjwLuCmkxRtxL4bcWgUBakyxOhfB8PbTD0OruF7ha2Sd4-0DMAGx9Lom5abB4Devw",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": [
+      {
+        "id": "6f6ce3fc-0ab0-4654-9aa2-4d2a1cc6a2ed",
+        "nome": "Raimundo Joaquim",
+        "criado_em": "2026-03-18T21:46:55.441391+00:00"
+      },
+      {
+        "id": "4b52adf4-3094-448a-bde3-344325cb5b97",
+        "nome": "Credo Lopes",
+        "criado_em": "2026-03-18T21:46:50.521234+00:00"
+      }
+    ],
+    "timestamp": "2026-03-26T07:01:16.845Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://lgvgrtqcienrqubnxaqs.supabase.co/rest/v1/projectos?select=id%2Cnome%2Cestado&estado=eq.activo&order=criado_em.desc&limit=6",
+    "path": "/rest/v1/projectos?select=id%2Cnome%2Cestado&estado=eq.activo&order=criado_em.desc&limit=6",
+    "requestHeaders": {
+      "authorization": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6ImMyODQ5M2ViLTgzNTMtNDVhYS05YTQ0LTFiMzAyNjhjZTMwOCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xndmdydHFjaWVucnF1Ym54YXFzLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI0OWI4NTYxZC0zMWM3LTRmOWYtYTIzNC1hZjE2YjUwNGU1ZWIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc0NTEyMDczLCJpYXQiOjE3NzQ1MDg0NzMsImVtYWlsIjoiYmVsbWlyb25nb2xhQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWxfdmVyaWZpZWQiOnRydWV9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc0NTA4NDczfV0sInNlc3Npb25faWQiOiI1ZmNlZjdmNy1jZTQ5LTQyN2EtYTZlYS03NmExNWUwNjkyOTEiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.OWji8q1cDQX7IVgXaehwWLjwLuCmkxRtxL4bcWgUBakyxOhfB8PbTD0OruF7ha2Sd4-0DMAGx9Lom5abB4Devw",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": [
+      {
+        "id": "7d5908a2-e9cd-4457-9dcb-287be710831e",
+        "nome": "[POP-04] Marketing, Conteudo e Redes Sociais",
+        "estado": "activo"
+      },
+      {
+        "id": "867746b1-9255-484a-a9ec-6c0f0d2e3adc",
+        "nome": "[POP-01] Gestao de Reunioes, Tarefas e Relatorios",
+        "estado": "activo"
+      },
+      {
+        "id": "19d69ffb-4a07-42e1-95b1-d5ec842c49ef",
+        "nome": "[POP-03] Entrega SIC - Onboarding e Implementacao",
+        "estado": "activo"
+      },
+      {
+        "id": "6f372067-a3b6-412a-ad31-be336c88a713",
+        "nome": "[POP-02] Gestao Comercial e Pipeline SIC",
+        "estado": "activo"
+      },
+      {
+        "id": "748359fb-c07d-48c1-8484-5d7a4b520e2e",
+        "nome": "[POP-07] Tecnologia, Agentes IA e Sistemas",
+        "estado": "activo"
+      },
+      {
+        "id": "e5050044-886d-4fb3-83f7-b0b7687cd1df",
+        "nome": "[POP-08] Operacoes, Logistica e Eventos",
+        "estado": "activo"
+      }
+    ],
+    "timestamp": "2026-03-26T07:01:16.847Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://lgvgrtqcienrqubnxaqs.supabase.co/rest/v1/tarefas?select=id%2Ctitulo%2Cactualizado_em&estado=eq.concluido&order=actualizado_em.desc&limit=3",
+    "path": "/rest/v1/tarefas?select=id%2Ctitulo%2Cactualizado_em&estado=eq.concluido&order=actualizado_em.desc&limit=3",
+    "requestHeaders": {
+      "authorization": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6ImMyODQ5M2ViLTgzNTMtNDVhYS05YTQ0LTFiMzAyNjhjZTMwOCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xndmdydHFjaWVucnF1Ym54YXFzLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI0OWI4NTYxZC0zMWM3LTRmOWYtYTIzNC1hZjE2YjUwNGU1ZWIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc0NTEyMDczLCJpYXQiOjE3NzQ1MDg0NzMsImVtYWlsIjoiYmVsbWlyb25nb2xhQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWxfdmVyaWZpZWQiOnRydWV9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc0NTA4NDczfV0sInNlc3Npb25faWQiOiI1ZmNlZjdmNy1jZTQ5LTQyN2EtYTZlYS03NmExNWUwNjkyOTEiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.OWji8q1cDQX7IVgXaehwWLjwLuCmkxRtxL4bcWgUBakyxOhfB8PbTD0OruF7ha2Sd4-0DMAGx9Lom5abB4Devw",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": [],
+    "timestamp": "2026-03-26T07:01:16.851Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://lgvgrtqcienrqubnxaqs.supabase.co/rest/v1/tarefas?select=id%2Ctitulo%2Cprioridade%2Cestado%2Cprazo%2Cprojecto_id&order=criado_em.desc&limit=7",
+    "path": "/rest/v1/tarefas?select=id%2Ctitulo%2Cprioridade%2Cestado%2Cprazo%2Cprojecto_id&order=criado_em.desc&limit=7",
+    "requestHeaders": {
+      "authorization": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6ImMyODQ5M2ViLTgzNTMtNDVhYS05YTQ0LTFiMzAyNjhjZTMwOCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xndmdydHFjaWVucnF1Ym54YXFzLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI0OWI4NTYxZC0zMWM3LTRmOWYtYTIzNC1hZjE2YjUwNGU1ZWIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc0NTEyMDczLCJpYXQiOjE3NzQ1MDg0NzMsImVtYWlsIjoiYmVsbWlyb25nb2xhQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWxfdmVyaWZpZWQiOnRydWV9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc0NTA4NDczfV0sInNlc3Npb25faWQiOiI1ZmNlZjdmNy1jZTQ5LTQyN2EtYTZlYS03NmExNWUwNjkyOTEiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.OWji8q1cDQX7IVgXaehwWLjwLuCmkxRtxL4bcWgUBakyxOhfB8PbTD0OruF7ha2Sd4-0DMAGx9Lom5abB4Devw",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": [
+      {
+        "id": "7c42345a-935e-48a0-b2fb-facd8a644c2e",
+        "titulo": "[03] Qualificacao BANT",
+        "prioridade": "medio",
+        "estado": "a_fazer",
+        "prazo": null,
+        "projecto_id": "6f372067-a3b6-412a-ad31-be336c88a713"
+      },
+      {
+        "id": "e223d0c8-bc42-412c-a82f-77a628ae1012",
+        "titulo": "[09] Triagem Incidente",
+        "prioridade": "medio",
+        "estado": "a_fazer",
+        "prazo": null,
+        "projecto_id": "748359fb-c07d-48c1-8484-5d7a4b520e2e"
+      },
+      {
+        "id": "eff6a846-0bcb-4b6a-b08e-76e27f62bdc3",
+        "titulo": "[02] Arquitectura do Sistema",
+        "prioridade": "medio",
+        "estado": "a_fazer",
+        "prazo": null,
+        "projecto_id": "748359fb-c07d-48c1-8484-5d7a4b520e2e"
+      },
+      {
+        "id": "a47ec082-e53a-46f7-8d18-ac547058d2f1",
+        "titulo": "[03] Desenvolvimento",
+        "prioridade": "medio",
+        "estado": "a_fazer",
+        "prazo": null,
+        "projecto_id": "748359fb-c07d-48c1-8484-5d7a4b520e2e"
+      },
+      {
+        "id": "97bd22d8-5890-42b3-96a6-e3063d534d4e",
+        "titulo": "[08] Deteccao Incidente",
+        "prioridade": "medio",
+        "estado": "a_fazer",
+        "prazo": null,
+        "projecto_id": "748359fb-c07d-48c1-8484-5d7a4b520e2e"
+      },
+      {
+        "id": "16b9785b-01fb-48cd-b3ac-19ed16de0175",
+        "titulo": "[04] Construcao do Agente",
+        "prioridade": "medio",
+        "estado": "a_fazer",
+        "prazo": null,
+        "projecto_id": "19d69ffb-4a07-42e1-95b1-d5ec842c49ef"
+      },
+      {
+        "id": "d60b52e7-06e9-4dad-a853-79c51a8122d7",
+        "titulo": "[11] Resolucao Incidente",
+        "prioridade": "medio",
+        "estado": "a_fazer",
+        "prazo": null,
+        "projecto_id": "748359fb-c07d-48c1-8484-5d7a4b520e2e"
+      }
+    ],
+    "timestamp": "2026-03-26T07:01:16.851Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://lgvgrtqcienrqubnxaqs.supabase.co/rest/v1/tarefas?select=id%2Cprojecto_id%2Cestado",
+    "path": "/rest/v1/tarefas?select=id%2Cprojecto_id%2Cestado",
+    "requestHeaders": {
+      "authorization": "Bearer eyJhbGciOiJFUzI1NiIsImtpZCI6ImMyODQ5M2ViLTgzNTMtNDVhYS05YTQ0LTFiMzAyNjhjZTMwOCIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2xndmdydHFjaWVucnF1Ym54YXFzLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI0OWI4NTYxZC0zMWM3LTRmOWYtYTIzNC1hZjE2YjUwNGU1ZWIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzc0NTEyMDczLCJpYXQiOjE3NzQ1MDg0NzMsImVtYWlsIjoiYmVsbWlyb25nb2xhQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWxfdmVyaWZpZWQiOnRydWV9LCJyb2xlIjoiYXV0aGVudGljYXRlZCIsImFhbCI6ImFhbDEiLCJhbXIiOlt7Im1ldGhvZCI6InBhc3N3b3JkIiwidGltZXN0YW1wIjoxNzc0NTA4NDczfV0sInNlc3Npb25faWQiOiI1ZmNlZjdmNy1jZTQ5LTQyN2EtYTZlYS03NmExNWUwNjkyOTEiLCJpc19hbm9ueW1vdXMiOmZhbHNlfQ.OWji8q1cDQX7IVgXaehwWLjwLuCmkxRtxL4bcWgUBakyxOhfB8PbTD0OruF7ha2Sd4-0DMAGx9Lom5abB4Devw",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": [
+      {
+        "id": "c3a0ae89-7d06-4e1d-ae99-ad6193161fcd",
+        "projecto_id": "f07c9106-1f7d-4efe-b157-2b038681ea3d",
+        "estado": "a_fazer"
+      },
+      {
+        "id": "d60b52e7-06e9-4dad-a853-79c51a8122d7",
+        "projecto_id": "748359fb-c07d-48c1-8484-5d7a4b520e2e",
+        "estado": "a_fazer"
+      },
+      {
+        "id": "d952937d-06c8-499f-b2df-f12a49c11f61",
+        "projecto_id": null,
+        "estado": "a_fazer"
+      },
+      {
+        "id": "4ea3e61b-2212-47fa-a2cd-d240477f8c3e",
+        "projecto_id": null,
+        "estado": "a_fazer"
+      },
+      {
+        "id": "bdfd8eb7-b2c7-43b7-919e-81617854dded",
+        "projecto_id": "748359fb-c07d-48c1-8484-5d7a4b520e2e",
+        "estado": "a_fazer"
+      },
+      {
+        "id": "16b9785b-01fb-48cd-b3ac-19ed16de0175",
+        "projecto_id": "19d69ffb-4a07-42e1-95b1-d5ec842c49ef",
+        "estado": "a_fazer"
+      },
+      {
+        "id": "97bd22d8-5890-42b3-96a6-e3063d534d4e",
+        "projecto_id": "748359fb-c07d-48c1-8484-5d7a4b520e2e",
+        "estado": "a_fazer"
+      },
+      {
+        "id": "a47ec082-e53a-46f7-8d18-ac547058d2f1",
+        "projecto_id": "748359fb-c07d-48c1-8484-5d7a4b520e2e",
+        "estado": "a_fazer"
+      },
+      {
+        "id": "eff6a846-0bcb-4b6a-b08e-76e27f62bdc3",
+        "projecto_id": "748359fb-c07d-48c1-8484-5d7a4b520e2e",
+        "estado": "a_fazer"
+      },
+      {
+        "id": "e223d0c8-bc42-412c-a82f-77a628ae1012",
+        "projecto_id": "748359fb-c07d-48c1-8484-5d7a4b520e2e",
+        "estado": "a_fazer"
+      },
+      {
+        "id": "7c42345a-935e-48a0-b2fb-facd8a644c2e",
+        "projecto_id": "6f372067-a3b6-412a-ad31-be336c88a713",
+        "estado": "a_fazer"
+      }
+    ],
+    "timestamp": "2026-03-26T07:01:16.851Z",
+    "section": "login"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/reunioes?_rsc=oh8t4",
+    "path": "/reunioes?_rsc=oh8t4",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": "[unable to parse]",
+    "timestamp": "2026-03-26T07:01:17.246Z",
+    "section": "dashboard"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/configuracoes?_rsc=1cdj3",
+    "path": "/configuracoes?_rsc=1cdj3",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": "[unable to parse]",
+    "timestamp": "2026-03-26T07:01:17.247Z",
+    "section": "dashboard"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/reunioes?_rsc=1ob96",
+    "path": "/reunioes?_rsc=1ob96",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": "[unable to parse]",
+    "timestamp": "2026-03-26T07:01:17.247Z",
+    "section": "dashboard"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/reunioes?_rsc=1iibs",
+    "path": "/reunioes?_rsc=1iibs",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": "[unable to parse]",
+    "timestamp": "2026-03-26T07:01:17.248Z",
+    "section": "dashboard"
+  },
+  {
+    "method": "GET",
+    "url": "https://lgvgrtqcienrqubnxaqs.supabase.co/storage/v1/object/public/avatars/49b8561d-31c7-4f9f-a234-af16b504e5eb/avatar.png",
+    "path": "/storage/v1/object/public/avatars/49b8561d-31c7-4f9f-a234-af16b504e5eb/avatar.png",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": "[unable to parse]",
+    "timestamp": "2026-03-26T07:01:17.295Z",
+    "section": "dashboard"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/login?_rsc=1i7t7",
+    "path": "/login?_rsc=1i7t7",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 307,
+    "responseBody": "[unable to parse]",
+    "timestamp": "2026-03-26T07:01:46.993Z",
+    "section": "task-detail"
+  },
+  {
+    "method": "GET",
+    "url": "https://taskup-md.vercel.app/dashboard",
+    "path": "/dashboard",
+    "requestHeaders": {
+      "authorization": "",
+      "content-type": "",
+      "cookie": ""
+    },
+    "requestBody": null,
+    "responseStatus": 200,
+    "responseBody": "[7486 chars - truncated]",
+    "timestamp": "2026-03-26T07:01:47.264Z",
+    "section": "task-detail"
+  }
+]

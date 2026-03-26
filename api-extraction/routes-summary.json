@@ -1,0 +1,164 @@
+[
+  {
+    "path": "/auth/v1/token",
+    "methods": [
+      "POST"
+    ],
+    "statuses": [
+      200
+    ],
+    "section": "login"
+  },
+  {
+    "path": "/rest/v1/users",
+    "methods": [
+      "GET"
+    ],
+    "statuses": [
+      200
+    ],
+    "section": "login"
+  },
+  {
+    "path": "/dashboard",
+    "methods": [
+      "GET"
+    ],
+    "statuses": [
+      200
+    ],
+    "section": "login"
+  },
+  {
+    "path": "/projectos",
+    "methods": [
+      "GET"
+    ],
+    "statuses": [
+      200
+    ],
+    "section": "login"
+  },
+  {
+    "path": "/guia",
+    "methods": [
+      "GET"
+    ],
+    "statuses": [
+      200
+    ],
+    "section": "login"
+  },
+  {
+    "path": "/configuracoes",
+    "methods": [
+      "GET"
+    ],
+    "statuses": [
+      200
+    ],
+    "section": "login"
+  },
+  {
+    "path": "/reunioes",
+    "methods": [
+      "GET"
+    ],
+    "statuses": [
+      200
+    ],
+    "section": "login"
+  },
+  {
+    "path": "/calendario",
+    "methods": [
+      "GET"
+    ],
+    "statuses": [
+      200
+    ],
+    "section": "login"
+  },
+  {
+    "path": "/colaboradores",
+    "methods": [
+      "GET"
+    ],
+    "statuses": [
+      200
+    ],
+    "section": "login"
+  },
+  {
+    "path": "/kanban",
+    "methods": [
+      "GET"
+    ],
+    "statuses": [
+      200
+    ],
+    "section": "login"
+  },
+  {
+    "path": "/tarefas",
+    "methods": [
+      "GET"
+    ],
+    "statuses": [
+      200
+    ],
+    "section": "login"
+  },
+  {
+    "path": "/rest/v1/notificacoes",
+    "methods": [
+      "HEAD"
+    ],
+    "statuses": [
+      200
+    ],
+    "section": "login"
+  },
+  {
+    "path": "/rest/v1/tarefas",
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "statuses": [
+      200
+    ],
+    "section": "login"
+  },
+  {
+    "path": "/rest/v1/projectos",
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "statuses": [
+      200
+    ],
+    "section": "login"
+  },
+  {
+    "path": "/storage/v1/object/public/avatars/49b8561d-31c7-4f9f-a234-af16b504e5eb/avatar.png",
+    "methods": [
+      "GET"
+    ],
+    "statuses": [
+      200
+    ],
+    "section": "dashboard"
+  },
+  {
+    "path": "/login",
+    "methods": [
+      "GET"
+    ],
+    "statuses": [
+      307
+    ],
+    "section": "task-detail"
+  }
+]
