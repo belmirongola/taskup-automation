@@ -1,6 +1,6 @@
 {
   "name": "taskup-cli",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "CLI para TaskUp MD — Automação via API Supabase",
   "type": "module",
   "private": false,
