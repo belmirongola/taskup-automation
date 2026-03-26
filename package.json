@@ -19,6 +19,11 @@
   "bin": {
     "taskup": "./dist/src/cli/index.js"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "node --loader ts-node/esm src/cli/index.ts",
