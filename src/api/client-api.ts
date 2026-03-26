@@ -224,7 +224,13 @@ export async function getAPIClient(apiUrl?: string): Promise<TaskUpAPIClient> {
   if (!_client.isAuthenticated()) {
     const auth = loadAuth();
     if (auth) {
-      await _client.login(auth.email, auth.password);
+      try {
+        await _client.login(auth.email, auth.password);
+      } catch (error) {
+        // Credenciais guardadas são inválidas - retorna cliente sem token
+        // O handler pode depois fazer login com credenciais novas
+        console.debug("Auto-login falhou, retornando cliente sem token");
+      }
     }
   }
 
