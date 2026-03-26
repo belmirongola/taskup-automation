@@ -24,9 +24,11 @@ import {
 } from "./handlers/projectos.js";
 import { handleConfigSet, handleConfigGet } from "./handlers/config.js";
 
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
-const pkg = require("../../package.json") as { name: string; version: string };
+import { readFileSync } from "fs";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const pkg = JSON.parse(readFileSync(join(__dirname, "../../../package.json"), "utf-8")) as { name: string; version: string };
 
 console.log(chalk.bold.cyan(`\n🚀 TaskUp CLI v${pkg.version}\n`));
 
