@@ -1,6 +1,6 @@
 {
   "name": "@belmirongola/taskup-cli",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "CLI para TaskUp MD — Automação via API Supabase",
   "type": "module",
   "private": false,
