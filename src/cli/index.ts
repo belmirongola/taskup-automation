@@ -24,10 +24,9 @@ import {
 } from "./handlers/projectos.js";
 import { handleConfigSet, handleConfigGet } from "./handlers/config.js";
 
-const pkg = {
-  name: "taskup-cli",
-  version: "1.0.0",
-};
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const pkg = require("../../package.json") as { name: string; version: string };
 
 console.log(chalk.bold.cyan(`\n🚀 TaskUp CLI v${pkg.version}\n`));
 
