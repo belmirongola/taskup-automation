@@ -1,0 +1,25 @@
+name = "taskup-api"
+main = "src/index.ts"
+type = "service"
+account_id = "4f46016c757f00fecf0d1ea66bcc101f"
+compatibility_date = "2024-12-16"
+
+[env.production]
+name = "taskup-api-prod"
+route = "api.taskup.marcadigital.ao/*"
+
+[env.staging]
+name = "taskup-api-staging"
+route = "staging-api.taskup.marcadigital.ao/*"
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "taskup_cache"
+
+[build]
+command = "npm run build"
+cwd = "."
+
+[build.upload]
+format = "service-worker"
+main = "./dist/index.js"
