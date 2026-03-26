@@ -1,5 +1,5 @@
 import ora from "ora";
-import { getClient } from "../../api/client.js";
+import { createClient } from "../../utils/client-factory.js";
 import { formatTable, formatJSON, formatSuccess, formatError, formatWarning } from "../../utils/formatter.js";
 import { ensureAuthenticatedWithAutoLogin } from "./auth.js";
 
@@ -14,7 +14,7 @@ export async function handleListTarefas(options: {
   const spinner = ora("Carregando tarefas...").start();
 
   try {
-    const client = await getClient();
+    const client = createClient();
     const tarefas = await client.listTarefas({
       estado: options.estado,
       prioridade: options.prioridade,
@@ -65,7 +65,7 @@ export async function handleCreateTarefa(options: {
   const spinner = ora("Criando tarefa...").start();
 
   try {
-    const client = await getClient();
+    const client = createClient();
     const tarefa = await client.createTarefa({
       titulo: options.titulo,
       descricao: options.descricao,
@@ -98,7 +98,7 @@ export async function handleUpdateTarefa(
   const spinner = ora("Actualizando tarefa...").start();
 
   try {
-    const client = await getClient();
+    const client = createClient();
     const tarefa = await client.updateTarefa(id, updates);
     spinner.succeed();
     console.log(formatSuccess(`Tarefa actualizada`));
@@ -121,7 +121,7 @@ export async function handleDeleteTarefa(id: string): Promise<void> {
   const spinner = ora("Deletando tarefa...").start();
 
   try {
-    const client = await getClient();
+    const client = createClient();
     await client.deleteTarefa(id);
     spinner.succeed();
     console.log(formatSuccess("Tarefa deletada"));
@@ -143,7 +143,7 @@ export async function handleGetTarefa(id: string, format?: "json"): Promise<void
   const spinner = ora("Carregando tarefa...").start();
 
   try {
-    const client = await getClient();
+    const client = createClient();
     const tarefa = await client.getTarefa(id);
     spinner.succeed();
 

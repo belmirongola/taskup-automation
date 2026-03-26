@@ -10,6 +10,7 @@ import { loadAuth } from "../utils/config.js";
 export class TaskUpAPIClient {
   private apiUrl: string;
   private token: string | null = null;
+  private currentUser: { id: string; email: string } | null = null;
 
   constructor(apiUrl = "http://localhost:8787") {
     this.apiUrl = apiUrl.replace(/\/$/, ""); // Remove trailing slash
@@ -29,6 +30,14 @@ export class TaskUpAPIClient {
     }
 
     this.token = data.data?.token || null;
+    this.currentUser = data.data?.user || { id: "", email };
+  }
+
+  async getUser(): Promise<{ id: string; email: string }> {
+    if (!this.currentUser) {
+      throw new Error("Not authenticated");
+    }
+    return this.currentUser;
   }
 
   async listTarefas(filters?: {

@@ -1,6 +1,6 @@
 import inquirer from "inquirer";
 import ora from "ora";
-import { TaskUpClient } from "../../api/client.js";
+import { createClient } from "../../utils/client-factory.js";
 import { loadConfig, saveConfig, loadAuth, saveAuth, clearAuth, isAuthenticated } from "../../utils/config.js";
 import { formatSuccess, formatError, formatInfo, formatWarning } from "../../utils/formatter.js";
 
@@ -47,7 +47,7 @@ export async function handleLogin(email?: string, password?: string): Promise<vo
       spinner.start("Autenticando...");
     }
 
-    const client = new TaskUpClient();
+    const client = createClient();
     await client.login(credentials.email, credentials.password);
     const user = await client.getUser();
 
