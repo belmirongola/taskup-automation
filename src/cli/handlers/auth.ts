@@ -41,6 +41,10 @@ export async function handleLogin(email?: string, password?: string): Promise<vo
       spinner.start("Autenticando...");
     }
 
+    // Trim para remover espaços capturados pelo inquirer
+    credentials.email = credentials.email.trim();
+    credentials.password = credentials.password.trim();
+
     // Criar cliente directamente sem auto-login (não usar singleton aqui)
     const { TaskUpAPIClient } = await import("../../api/client-api.js");
     const apiUrl = process.env.TASKUP_API_URL || "https://taskup-api.marca-digital.workers.dev";
