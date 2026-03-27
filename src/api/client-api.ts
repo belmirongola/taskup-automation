@@ -17,13 +17,25 @@ export class TaskUpAPIClient {
   }
 
   async login(email: string, password: string): Promise<void> {
+    const payload = JSON.stringify({ email, password });
+
+    if (process.env.TASKUP_DEBUG) {
+      console.error(`[DEBUG] POST ${this.apiUrl}/auth/login`);
+      console.error(`[DEBUG] email="${email}" (${email.length} chars)`);
+      console.error(`[DEBUG] password length=${password.length} chars=[${[...password].map(c => c.charCodeAt(0)).join(',')}]`);
+    }
+
     const response = await fetch(`${this.apiUrl}/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
+      body: payload,
     });
 
     const data = (await response.json()) as any;
+
+    if (process.env.TASKUP_DEBUG) {
+      console.error(`[DEBUG] Response status=${response.status} success=${data.success} error=${data.error || 'none'}`);
+    }
 
     if (!data.success) {
       throw new Error(data.error || "Login failed");
