@@ -8,46 +8,43 @@ export async function handleLogin(email?: string, password?: string): Promise<vo
   const spinner = ora();
 
   try {
-    let credentials = { email: email || "", password: password || "" };
+    let credentials: { email: string; password: string; remember?: boolean };
 
-    // Tentar reusar credenciais guardadas se não foram fornecidas
-    if (!credentials.email || !credentials.password) {
-      const saved = loadAuth();
-      if (saved) {
-        credentials = { email: saved.email, password: saved.password };
-        spinner.start("Reutilizando autenticação guardada...");
-      } else {
-        const answers = await inquirer.prompt([
-          {
-            type: "input",
-            name: "email",
-            message: "Email:",
-            default: credentials.email,
-            validate: (val) => val.includes("@") ? true : "Email inválido",
-          },
-          {
-            type: "password",
-            name: "password",
-            message: "Password:",
-            mask: "*",
-          },
-          {
-            type: "confirm",
-            name: "remember",
-            message: "Guardar credenciais para futuro?",
-            default: true,
-          },
-        ]);
-        credentials = answers;
-        if (!spinner.isSpinning) {
-          spinner.start("Autenticando...");
-        }
-      }
+    if (email && password) {
+      // Credenciais fornecidas via flags — usar directamente
+      credentials = { email, password, remember: true };
+      spinner.start("Autenticando...");
     } else {
+      // Perguntar ao utilizador — nunca reutilizar guardadas aqui
+      const answers = await inquirer.prompt([
+        {
+          type: "input",
+          name: "email",
+          message: "Email:",
+          default: email || "",
+          validate: (val) => val.includes("@") ? true : "Email inválido",
+        },
+        {
+          type: "password",
+          name: "password",
+          message: "Password:",
+          mask: "*",
+        },
+        {
+          type: "confirm",
+          name: "remember",
+          message: "Guardar credenciais para futuro?",
+          default: true,
+        },
+      ]);
+      credentials = answers;
       spinner.start("Autenticando...");
     }
 
-    const client = await createClient();
+    // Criar cliente directamente sem auto-login (não usar singleton aqui)
+    const { TaskUpAPIClient } = await import("../../api/client-api.js");
+    const apiUrl = process.env.TASKUP_API_URL || "https://taskup-api.marca-digital.workers.dev";
+    const client = new TaskUpAPIClient(apiUrl);
     await client.login(credentials.email, credentials.password);
     const user = await client.getUser();
 
